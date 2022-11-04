@@ -40,7 +40,7 @@ const Links = () => {
 							<a id='book__design' href="https://books.zuri.team/design-rules">Background Check for Coders</a>
 						</div>
 						<div className='links'>
-							<a id='contact' href="contact">Contact Me</a>
+							<a id='contact' href="/contact">Contact Me</a>
 						</div>
 					</div>
 
