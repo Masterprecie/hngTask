@@ -7,8 +7,20 @@ import Footer from './Footer';
 
 const Contact = () => {
 
+	const initialValue={
+	firstName: '',
+	lastName: '',
+	email: '',
+	message: '',
+	checkbox: '',
+	}
+
+	const [person, setPerson] = useState({initialValue})
+
 
 	const [validated, setValidated] = useState(false);
+
+
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -20,6 +32,12 @@ const Contact = () => {
 	// alert('Message Sent')
   };
 
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setPerson({ ...person, [name]: value })
+		console.log(person);
+	}
 	
 
   return (
@@ -34,30 +52,65 @@ const Contact = () => {
 				</p>
 			</div>
 			<Form noValidate validated={validated} onSubmit={handleSubmit} className='pb-4'>
-				<Form.Group className="mb-3 modInputFlex" controlId="formBasicName">
+				<Form.Group className="mb-3 modInputFlex">
 						<div className='modInput'>
 							<Form.Label>First name</Form.Label>
-							<Form.Control id='first_name' className='modInput' type="text" placeholder="Enter your first name"  required/>
+						  <Form.Control className='modInput'
+							  id='first_name'
+							  type="text"
+							  placeholder="Enter your first name"
+							  name='firstName'
+							  value={person.firstName}
+							  onChange={handleChange}							 
+							  required />
 						</div>
 						<div className='modInput'>
 							<Form.Label>Last Name</Form.Label>					  
-							<Form.Control id='last_name' className='modInput' type="text" placeholder="Enter your last name"  required />	
+						  <Form.Control  className='modInput'
+							  id='last_name'							 
+							  type="text"
+							  placeholder="Enter your last name"
+							  name='lastName'
+							  value={person.lastName} 
+							  onChange={handleChange}	
+							  required />	
 						</div>				  
 					</Form.Group>
 
-					<Form.Group className="mb-3" controlId="formBasicEmail">
+					<Form.Group className="mb-3" >
 						<Form.Label>Email</Form.Label>
-						<Form.Control id='email' type="email" placeholder="yourname@email.com"  required />
+					  <Form.Control
+						  id='email'
+						  type="email"
+						  placeholder="yourname@email.com" 
+						  name='email'
+						  value={person.email}
+						  onChange={handleChange}	
+						  required />
 				</Form.Group>
 
-					<Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+					<Form.Group className="mb-3">
 					<Form.Label>Message</Form.Label>
-					<Form.Control id='message' as="textarea" rows={3} placeholder="Send me a message and I'll reply you as soon as possible..."  required />
+					  <Form.Control
+						  id='message'
+						  as="textarea"
+						  rows={3}
+						  placeholder="Send me a message and I'll reply you as soon as possible..."
+						  name='message'
+						  value={person.message}
+						  onChange={handleChange}	
+						  required />
 					</Form.Group>
 				
-					<Form.Group className="mb-3" controlId="formBasicCheckbox">
-					<Form.Check type="checkbox" label="You agree to providing your data to {name} who may contact you."   required/>
-				</Form.Group>
+					<Form.Group className="mb-3">
+					  <Form.Check
+						  type="checkbox"
+						  label="You agree to providing your data to {name} who may contact you."
+						  name='checkBok'
+						  value={person.checkBox}
+						  onChange={handleChange}	
+						  required />
+					</Form.Group>
 				
 				  <Button id='btn__submit' variant="primary" type="submit" className='w-100'>
 				Send message
