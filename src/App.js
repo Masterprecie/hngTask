@@ -8,10 +8,11 @@ import Contact from './Components/Contact';
 function App() {
   return (
       <>
-      <Routes>
-      <Route path='/' element= {<Links/>}/>
-      <Route path='/contact' element= {<Contact/>} />
-
+       <Routes>
+        <Route path="/">
+          <Route index element={<Links/>} />
+          <Route path='contact' element={<Contact />} />
+        </Route>
       </Routes>
       </>
   );
