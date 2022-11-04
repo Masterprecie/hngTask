@@ -99,6 +99,16 @@ position: absolute;
 left: 80px;
 }
 
+.error {
+text-decoration: italic;
+color: rgb(255, 59, 59);
+}
+
+.success{
+border-radius: 5px;
+border: 2px solid green;
+margin-top: 200px;
+}
 
 
 @media (max-width: 769px) {
@@ -150,19 +160,11 @@ left: 80px;
   }    
   
     /* Contact page  styling*/
-    .modInputFlex {
+    .form{
       flex-direction: column;
      
     }
 }
 
-/* Contact page  styling*/
-.modInputFlex{
-display: flex;
-gap: 20px;
-}
 
-.modInput{
-width: 100%!important;
-}
 
