@@ -106,8 +106,12 @@ color: rgb(255, 59, 59);
 
 .success{
 border-radius: 5px;
-border: 2px solid green;
 margin-top: 200px;
+}
+
+.home{
+text-decoration: none;
+color: #fff;
 }
 
 

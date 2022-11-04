@@ -47,7 +47,6 @@ const Contact = () => {
 	
 	const validate = (values) => {
 		const errors = {};
-		//const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-][email protected][a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 		if (!values.firstName) {
 			errors.firstName = 'First Name is required!';
 		}
@@ -56,14 +55,11 @@ const Contact = () => {
 		}
 		if (!values.email) {
 			errors.email = 'Email is required!';
-		}// } else if (!regex.test(values.email))
-		// 	errors.email = 'This is not a valid email format!';
+		} 
 		if (!values.message) {
 			errors.message = 'Message cannot be blank!';
 		}
-		// if (!values.checkBox) {
-		// 	errors.checkBox= 'Check the Box!';
-		// }
+		
 		return errors;
 	}
 
