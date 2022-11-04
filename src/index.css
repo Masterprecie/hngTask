@@ -11,3 +11,155 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.box {
+  background-color: #fff;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.box h5 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.link-section {
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-grow: 0;
+  gap: 24px;
+  height: auto;
+  width: 100%;
+}
+
+.links {
+  align-items: center;
+  display: flex;
+  height: 76px;
+  justify-content: center;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.link-section .links a {
+  align-items: center;
+  background: #eaecf0;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  color: #101828;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 76px;
+  justify-content: center;
+  line-height: 28px;
+  text-decoration: none;
+  width: 80%;
+}
+
+footer {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-top: 10px;
+  border-top: 1px solid #EAECF0;
+}
+
+.shareButton {
+  padding-top: 50px;
+  position: absolute;
+  top: -10px;
+  right: 150px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.mobView{
+display: none;
+position: absolute;
+left: 80px;
+}
+
+
+
+@media (max-width: 769px) {
+
+  #twitter,
+  #btn__zuri,
+  #books,
+  #book__python,
+  #pitch,
+  #book__design {
+    width: 100%;
+  }
+
+  footer img {
+    width: 70%;
+
+  }
+
+  footer p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  .slack-flip {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  #slack {
+    margin-right: 10px;
+  }
+
+  .webView{
+  display: none;
+  }
+  .mobView{
+  display: block;
+  }    
+  
+    /* Contact page  styling*/
+    .modInputFlex {
+      flex-direction: column;
+     
+    }
+}
+
+/* Contact page  styling*/
+.modInputFlex{
+display: flex;
+gap: 20px;
+}
+
+.modInput{
+width: 100%!important;
+}
+
