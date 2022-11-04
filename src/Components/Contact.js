@@ -17,15 +17,15 @@ const Contact = () => {
       event.stopPropagation();
     }
     setValidated(true);
-	alert('Message Sent')
+	// alert('Message Sent')
   };
 
 	
 
   return (
 	  <>
-		  <article className='container'>
-			<div>
+		  <article className='container pb-5'>
+			<div className='pt-5'>
 				<h2>
 					Contact Me
 				</h2>
@@ -33,7 +33,7 @@ const Contact = () => {
 					Hi there, contact me to ask me about anything you have in mind.
 				</p>
 			</div>
-			<Form noValidate validated={validated} onSubmit={handleSubmit}>
+			<Form noValidate validated={validated} onSubmit={handleSubmit} className='pb-4'>
 				<Form.Group className="mb-3 modInputFlex" controlId="formBasicName">
 						<div className='modInput'>
 							<Form.Label>First name</Form.Label>
@@ -63,8 +63,8 @@ const Contact = () => {
 				Send message
 				</Button>
 			</Form>		
-			<Footer/>	  
 		  </article>
+			<Footer/>	  
 		  
 	 </>
   )

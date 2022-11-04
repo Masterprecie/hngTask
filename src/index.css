@@ -71,13 +71,15 @@ footer {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
+  padding-right:10px;
+  padding-left:10px;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   padding-top: 10px;
   border-top: 1px solid #EAECF0;
 }
