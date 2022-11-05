@@ -63,6 +63,7 @@ const Contact = () => {
 		return errors;
 	}
 
+	
   return (
 	  <>
 		  <article className='container pb-5'>
@@ -129,7 +130,7 @@ const Contact = () => {
 					<Form.Group className="mb-3">
 					  <Form.Check
 						  type="checkbox"
-						  label="You agree to providing your data to {name} who may contact you."
+						  label="You agree to providing your data to Ikpa Precious who may contact you."
 						  name='checkBox'
 						  value={person.checkBox}
 						  onChange={handleChange}	
